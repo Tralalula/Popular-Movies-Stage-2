@@ -7,6 +7,12 @@ package com.example.android.popularmovies.tmdb;
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
 
+/**
+ * This interface class is designed to be used with the TmdbInterface interface,
+ * and also to be used with Retrofit.
+ *
+ * http://square.github.io/retrofit/
+ */
 public class TmdbService {
     private final static String BASE_URL = "http://api.themoviedb.org/3";
     private final static String API_KEY = new ApiKey().getKey();

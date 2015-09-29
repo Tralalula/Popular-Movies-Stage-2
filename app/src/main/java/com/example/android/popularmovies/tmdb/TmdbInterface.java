@@ -9,6 +9,12 @@ import retrofit.http.GET;
 import retrofit.http.Path;
 import retrofit.http.Query;
 
+/**
+ * This interface is designed to be used with the TmdbService class,
+ * and also to be used with Retrofit.
+ *
+ * http://square.github.io/retrofit/
+ */
 public interface TmdbInterface {
     @GET("/discover/movie")
     void getMovieList(

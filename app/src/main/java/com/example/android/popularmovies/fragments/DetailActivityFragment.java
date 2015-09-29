@@ -100,7 +100,7 @@ public class DetailActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
 
-        if (mGotData) {
+        if (mGotData && isAdded()) {
             updateDetailActivityWithData(rootView);
         }
         return rootView;
@@ -136,7 +136,11 @@ public class DetailActivityFragment extends Fragment {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
         shareIntent.setType("text/plain");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, mMovie.getTrailers().get(0).createYoutubeLink());
+
+        String shareMessage = "Check out the trailer for " + mMovie.getOriginalTitle() + "\n" +
+                mMovie.getTrailers().get(0).createYoutubeLink();
+
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
         return shareIntent;
     }
 
@@ -351,7 +355,8 @@ public class DetailActivityFragment extends Fragment {
     private void updateTrailers() {
         if (mMovie.getTrailers() == null || mMovie.getTrailers().isEmpty()) {
             addToLinearLayout(mTrailersLinearLayout, getString(
-                    R.string.no_trailers_available), Utility.STANDARD_SECOND_HEADLINE_TYPEFACE);
+                    R.string.no_trailers_available),
+                    Utility.STANDARD_SECOND_HEADLINE_TYPEFACE);
         } else {
             if (mShareActionProvider != null) {
                 mShareMenuItem.setVisible(true);
