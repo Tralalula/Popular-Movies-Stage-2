@@ -34,10 +34,10 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:background="#66000000"
-                    android:padding="16dp"
-                    android:text="Please select a movie"
-                    android:textColor="#fff"
+                    android:background="@color/transparent_black"
+                    android:padding="@dimen/medium"
+                    android:text="@string/detail_fragment_select_movie_msg"
+                    android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"/>
             </RelativeLayout>
@@ -46,22 +46,22 @@
                 android:id="@+id/abc"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginBottom="@dimen/medium"
+                android:layout_marginLeft="@dimen/medium"
+                android:layout_marginRight="@dimen/medium"
                 android:layout_weight="1"
-                android:paddingTop="4dp">
+                android:paddingTop="@dimen/xtra_small">
 
                 <ImageView
                     android:id="@+id/poster"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#000"/>
+                    android:background="@color/black"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="@dimen/small"
                     android:layout_toRightOf="@id/poster"
                     android:orientation="vertical">
 
@@ -87,8 +87,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/poster"
-                    android:text="Overview"
-                    android:textColor="#00B0FF"
+                    android:text="@string/detail_fragment_overview_title"
+                    android:textColor="@color/light_blue"
                     android:textSize="20sp"
                     android:visibility="invisible"/>
 
@@ -97,17 +97,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/overview_title"
-                    android:layout_marginBottom="8dp"
-                    android:textSize="14dp"/>
+                    android:layout_marginBottom="@dimen/small"
+                    android:textSize="14sp"/>
 
                 <TextView
                     android:id="@+id/trailers_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/overview"
-                    android:text="Trailers"
-                    android:textColor="#00B0FF"
-                    android:textSize="20dp"
+                    android:text="@string/detail_fragment_trailers_title"
+                    android:textColor="@color/light_blue"
+                    android:textSize="20sp"
                     android:visibility="invisible"/>
 
                 <LinearLayout
@@ -115,18 +115,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/trailers_title"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/small"
                     android:orientation="vertical"
-                    android:textSize="14dp"/>
+                    android:textSize="14sp"/>
 
                 <TextView
                     android:id="@+id/reviews_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/trailers"
-                    android:text="User Reviews"
-                    android:textColor="#00B0FF"
-                    android:textSize="20dp"
+                    android:text="@string/detail_fragment_reviews_title"
+                    android:textColor="@color/light_blue"
+                    android:textSize="20sp"
                     android:visibility="invisible"/>
 
                 <LinearLayout
@@ -134,9 +134,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/reviews_title"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/small"
                     android:orientation="vertical"
-                    android:textSize="14dp"/>
+                    android:textSize="14sp"/>
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
@@ -145,7 +145,7 @@
         android:id="@+id/favoriteBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/small"
         android:clickable="true"
         android:src="@drawable/ic_favorite"
         android:visibility="invisible"

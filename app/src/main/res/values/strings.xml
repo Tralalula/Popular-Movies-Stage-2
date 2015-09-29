@@ -25,4 +25,10 @@
     <string name="no_reviews_available">No reviews available</string>
 
     <string name="no_favored_movies">You haven\'t favored any movies yet!</string>
+
+    <string name="detail_fragment_select_movie_msg">Please select a movie</string>
+    <string name="detail_fragment_overview_title">Overview</string>
+    <string name="detail_fragment_trailers_title">Trailers</string>
+    <string name="detail_fragment_reviews_title">User Reviews</string>
+
 </resources>
